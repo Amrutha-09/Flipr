@@ -1,0 +1,45 @@
+
+<body>
+<div class="wrapper">
+    <div class="title">REGISTER Form &nbsp;&nbsp;&nbsp;
+        <a routerLink="/LOGIN"></a>
+    </div>
+    <div class="form">
+    <form #RegisterForm="ngForm" nonvalidate>
+       <div class="inputfield">
+          <label>User Name</label>
+          <input type="text" class="input" name="userName" [(ngModel)]="user.userName">
+       </div>
+
+       <div class="inputfield">
+        <label>MailId</label>
+        <input type="text" class="input" name="mailId" [(ngModel)]="user.mailId">
+     </div>   
+
+     <div class="inputfield">
+        <label>MobileNumber</label>
+        <input type="number" class="input" name="mobileNumber" [(ngModel)]="user.mobileNumber">
+     </div>  
+       
+        <div class="inputfield">
+          <label>password</label>
+          <input type="password" class="input" name="password" [(ngModel)]="user.password">
+       </div>   
+       
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p>Agreed to terms and conditions</p>
+       </div> 
+      <div class="inputfield">
+        <input type="submit" [disabled]="!RegisterForm.valid" (click)="RegisterSubmit()" value="Register" class="btn">
+        
+      </div>
+    </form>
+    </div>
+</div>
+</body>
+
+
